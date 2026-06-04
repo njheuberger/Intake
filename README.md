@@ -1,6 +1,6 @@
 # DesignSwiss Field Intake App
 
-Private iPad-friendly intake app for capturing customer details, project requirements, site visit notes, measurements, photos, and early estimate line items.
+Private iPad-friendly intake app for capturing customer details, project requirements, site visit notes, measurements, photos, early estimate line items, and customer-ready proposals.
 
 ## Tech Stack
 
@@ -8,6 +8,7 @@ Private iPad-friendly intake app for capturing customer details, project require
 - TypeScript
 - Tailwind CSS
 - Supabase Auth, Postgres, and Storage
+- Server-side proposal PDF generation
 - Vercel deployment-ready
 
 ## Local Setup
@@ -75,7 +76,19 @@ Open `http://localhost:3000/login`.
 4. Name it `DesignSwiss Intake`.
 5. Open the app from the Home Screen icon.
 
-## Phase 1 Scope
+## Proposal Generation
+
+Project detail pages include a `Generate Proposal` action. The proposal preview page pulls the customer, project, latest site visit, estimate items, and up to four project photos into a branded DesignSwiss proposal.
+
+From the preview page, `Download PDF` generates a server-side PDF for the authenticated user. PDFs are generated on demand and are not stored in Supabase yet.
+
+PDF filenames use:
+
+```text
+DesignSwiss-Proposal-[ProjectName]-[Date].pdf
+```
+
+## Current Scope
 
 Included:
 
@@ -87,6 +100,8 @@ Included:
 - Site visit capture
 - Estimate line item capture with calculated totals
 - Private project photo upload and gallery
+- Proposal preview from project records
+- Branded proposal PDF download
 - Supabase SQL schema and setup notes
 
 Not included yet:
@@ -95,6 +110,6 @@ Not included yet:
 - Payment processing
 - Customer portal
 - AI summaries
-- PDF generation
 - E-signature
 - Multi-user roles
+- Saved proposal history

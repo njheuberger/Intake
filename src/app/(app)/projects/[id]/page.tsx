@@ -50,6 +50,7 @@ export default async function ProjectDetailPage({
             <ButtonLink href={`/projects/${id}/site-visit/new`}>Add Site Visit</ButtonLink>
             <ButtonLink href={`/projects/${id}/estimate/new`}>Add Estimate Item</ButtonLink>
             <ButtonLink href={`/projects/${id}/photos`}>Upload Photo</ButtonLink>
+            <ButtonLink href={`/projects/${id}/proposal`}>Generate Proposal</ButtonLink>
             <SecondaryLink href={`/projects/${id}/edit`}>Edit Project</SecondaryLink>
           </>
         }
