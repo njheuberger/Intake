@@ -21,7 +21,7 @@ export function MobileNav({ userEmail }: { userEmail?: string | null }) {
 
   return (
     <>
-      <header className="sticky top-0 z-30 border-b border-[var(--border)] bg-[#0c1116]/95 backdrop-blur lg:hidden">
+      <header className="safe-top sticky top-0 z-30 border-b border-[var(--border)] bg-[#0c1116]/95 backdrop-blur lg:hidden">
         <div className="flex min-h-16 items-center justify-between px-4">
           <Link href="/dashboard" className="inline-flex rounded-md focus:outline-none focus:ring-2 focus:ring-white/40" aria-label="Go to dashboard">
             <DesignSwissLogo size="small" priority />
@@ -44,7 +44,7 @@ export function MobileNav({ userEmail }: { userEmail?: string | null }) {
       {open ? (
         <div className="fixed inset-0 z-40 lg:hidden" role="dialog" aria-modal="true" aria-label="Navigation menu">
           <button className="absolute inset-0 bg-black/60" aria-label="Close navigation menu" type="button" onClick={() => setOpen(false)} />
-          <div className="absolute right-0 top-0 flex h-full w-full max-w-[340px] flex-col border-l border-[var(--border)] bg-[#0c1116] shadow-2xl shadow-black/40">
+          <div className="safe-top safe-bottom absolute right-0 top-0 flex h-full w-full max-w-[340px] flex-col border-l border-[var(--border)] bg-[#0c1116] shadow-2xl shadow-black/40">
             <div className="flex min-h-20 items-center justify-between border-b border-[var(--border)] px-5">
               <Link href="/dashboard" onClick={() => setOpen(false)} className="inline-flex rounded-md focus:outline-none focus:ring-2 focus:ring-white/40" aria-label="Go to dashboard">
                 <DesignSwissLogo size="small" />

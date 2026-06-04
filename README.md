@@ -67,6 +67,14 @@ Open `http://localhost:3000/login`.
 3. Add the same environment variables in Vercel Project Settings.
 4. Deploy.
 
+## Install on iPad Home Screen
+
+1. Open `https://intake.designswiss.org` in Safari.
+2. Tap Share.
+3. Tap Add to Home Screen.
+4. Name it `DesignSwiss Intake`.
+5. Open the app from the Home Screen icon.
+
 ## Phase 1 Scope
 
 Included:
